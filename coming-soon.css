@@ -1,0 +1,37 @@
+/* The one-page "Coming soon" site: everything on the plum band, with the example receipt beside it. */
+body.soon {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: var(--hero);
+  color: var(--on-hero);
+}
+
+.soon a { color: inherit; }
+.soon a:focus-visible { outline-color: var(--accent); }
+
+.soon-brand .wrap { padding-block: 16px; }
+.soon-brand .brand { color: inherit; }
+
+.soon-main { flex: 1; display: flex; align-items: center; padding-block: 16px 48px; }
+@media (min-width: 880px) { .soon-main { padding-block: 24px 64px; } }
+
+.soon .pill { margin-top: 0; }
+
+.soon h1 {
+  margin-top: 20px;
+  font-size: clamp(2.5rem, 12vw, 4.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.soon-tagline { margin-top: 16px; font-size: clamp(1.25rem, 3vw, 1.625rem); font-weight: 700; }
+.soon .hero-lead { margin-top: 12px; }
+.soon-contact { margin-top: 24px; }
+
+.soon-footer { padding-block: 16px 24px; border-top: 1px solid var(--on-hero); font-size: 0.9375rem; }
+.soon-footer .wrap { display: grid; gap: 4px; }
+
+/* Long e-mail addresses may wrap instead of widening the page at large text sizes. */
+.soon .hero-grid > *, .soon-footer .wrap > * { min-width: 0; }
