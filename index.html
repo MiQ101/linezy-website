@@ -7,49 +7,148 @@
 <meta name="referrer" content="no-referrer">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#7B2FA8">
-<title>Linezy: coming soon</title>
-<meta name="description" content="Linezy reads your shop receipts into items and prices, so you can see what you spend and how prices change. Coming soon to iPhone and Android.">
+<title>Linezy: every receipt, down to every line</title>
+<meta name="description" content="Linezy reads your shop receipts into items and prices, so you can see what you spend and how prices change. No ads, no bank linking. Coming to iPhone and Android.">
 <link rel="icon" href="img/icon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="coming-soon.css">
 </head>
-<body class="soon">
-<header class="soon-brand on-hero">
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header on-hero">
   <div class="wrap">
-    <span class="brand"><img src="img/icon.svg" alt="" width="36" height="36">Linezy</span>
+    <a class="brand" href="./"><img src="img/icon.svg" alt="" width="36" height="36">Linezy</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="#how">How it works</a>
+      <a href="#privacy">Your data</a>
+      <a href="#plans">Plans</a>
+    </nav>
   </div>
 </header>
 
-<main class="soon-main">
-  <div class="wrap hero-grid">
-    <div>
-      <p class="pill">
-        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg>
-        For iPhone and Android
-      </p>
-      <h1>Coming soon</h1>
-      <p class="soon-tagline">Every receipt, down to every line.</p>
-      <p class="hero-lead">Linezy reads your shop receipts into items and prices, so you can see what you spend and how prices change.</p>
-      <p class="soon-contact">Questions? <a href="mailto:support@linezy.app">support@linezy.app</a></p>
+<main id="main">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>Every receipt, down to every line.</h1>
+        <p class="hero-lead">Scan a paper receipt or add a PDF. Linezy reads it into items and prices, so you can see what you spend and how prices change.</p>
+        <p class="pill">
+          <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg>
+          Coming soon to iPhone and Android
+        </p>
+      </div>
+      <figure class="sample" role="img" aria-label="Example of a receipt read by Linezy: four items with prices, a price rise of 14 percent on one and an offer of 29 percent off on another.">
+        <div class="sample-top"><span>Corner Market</span><span>Sep 12 · 4 items</span></div>
+        <ul>
+          <li><span>Oat drink, 1 l</span><span>€1.89</span><small class="up">↑ Up 14 % since March</small></li>
+          <li><span>Rye bread</span><span>€1.45</span></li>
+          <li><span>Coffee, 500 g</span><span>€6.49</span><small class="offer">↓ Offer −29 %</small></li>
+          <li><span>Bananas, 0.8 kg</span><span>€1.20</span></li>
+        </ul>
+        <div class="sample-total"><span>Total</span><span>€11.03</span></div>
+        <figcaption class="sample-note">An example, not a real receipt.</figcaption>
+      </figure>
     </div>
-    <figure class="sample" role="img" aria-label="Example of a receipt read by Linezy: four items with prices, a price rise of 14 percent on one and an offer of 29 percent off on another.">
-      <div class="sample-top"><span>Corner Market</span><span>Sep 12 · 4 items</span></div>
-      <ul>
-        <li><span>Oat drink, 1 l</span><span>€1.89</span><small class="up">↑ Up 14 % since March</small></li>
-        <li><span>Rye bread</span><span>€1.45</span></li>
-        <li><span>Coffee, 500 g</span><span>€6.49</span><small class="offer">↓ Offer −29 %</small></li>
-        <li><span>Bananas, 0.8 kg</span><span>€1.20</span></li>
+  </section>
+
+  <section class="section" id="how" aria-labelledby="how-h">
+    <div class="wrap">
+      <h2 id="how-h">From a crumpled receipt to your own price history</h2>
+      <ol class="steps">
+        <li><h3>Add a receipt</h3><p>Scan paper with your camera, or import a photo, screenshot or PDF. No signal? It waits on your phone.</p></li>
+        <li><h3>Linezy reads every line</h3><p>AI reads the shop, date, items, prices and discounts. It shows you what it isn't sure about, and you can correct anything.</p></li>
+        <li><h3>See where the money goes</h3><p>Spending by month, category and shop, and what each product has cost you over time.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section tint" aria-labelledby="features-h">
+    <div class="wrap">
+      <h2 id="features-h">What's in the app</h2>
+      <ul class="cards">
+        <li class="card">
+          <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg>
+          <h3>Price history</h3><p>Every product you buy, per kg, liter or piece, with offers shown apart from regular prices.</p>
+        </li>
+        <li class="card">
+          <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20v-7M12 20V5M19 20V10"/></svg>
+          <h3>Spending</h3><p>This month against the last, broken down by category and by shop.</p>
+        </li>
+        <li class="card">
+          <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.8 3.1-6 6.5-6s5.9 2.2 6.5 6"/><path d="M16 4.8a3.5 3.5 0 0 1 0 6.4M18.5 14.5c1.7.9 2.7 2.8 3 5.5"/></svg>
+          <h3>Share with your household</h3><p>One shared list for up to 6 people. Any receipt can stay private to you.</p>
+        </li>
+        <li class="card">
+          <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7.5 3v5.5c0 4.5-3 8-7.5 9.5-4.5-1.5-7.5-5-7.5-9.5V6z"/><path d="M9 12l2.2 2.2L15.2 10"/></svg>
+          <h3>Warranties</h3><p>Keep the warranty with its receipt and get a reminder on your phone before it runs out.</p>
+        </li>
+        <li class="card">
+          <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7.5 10.5L12 15l4.5-4.5"/><path d="M4 19.5h16"/></svg>
+          <h3>Export, always free</h3><p>Excel, CSV or PDF. Your receipts are yours to take with you.</p>
+        </li>
+        <li class="card">
+          <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3l18 18"/><path d="M8.5 15.5a5 5 0 0 1 6-.8M5 12a10 10 0 0 1 3.5-2.4M19 12a10 10 0 0 0-6.5-2.9"/><circle cx="12" cy="19" r=".6"/></svg>
+          <h3>Works without a connection</h3><p>Scans and corrections are saved on your phone first and sent when you're back online.</p>
+        </li>
       </ul>
-      <div class="sample-total"><span>Total</span><span>€11.03</span></div>
-      <figcaption class="sample-note">An example, not a real receipt.</figcaption>
-    </figure>
-  </div>
+    </div>
+  </section>
+
+  <section class="section" id="privacy" aria-labelledby="privacy-h">
+    <div class="wrap">
+      <h2 id="privacy-h">Receipts say a lot about you. They stay yours.</h2>
+      <ul class="cards">
+        <li class="card"><h3>No ads, no selling</h3><p>No ads of any kind, and we never sell personal data.</p></li>
+        <li class="card"><h3>No bank linking</h3><p>Linezy never asks for your bank. It only knows the receipts you add.</p></li>
+        <li class="card"><h3>Stored in the EU</h3><p>Your receipts and account are stored in Frankfurt, Germany.</p></li>
+        <li class="card"><h3>AI only if you say yes</h3><p>Receipts are read by Google Gemini, and only after you agree. Say no and you can still type receipts in by hand.</p></li>
+        <li class="card"><h3>No analytics or tracking</h3><p>Not in the app and not on this website.</p></li>
+        <li class="card"><h3>Delete whenever you want</h3><p>Delete a receipt or your whole account right in the app.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section tint" id="plans" aria-labelledby="plans-h">
+    <div class="wrap">
+      <h2 id="plans-h">Free to start</h2>
+      <div class="plans">
+        <div class="plan">
+          <h3>Free</h3>
+          <ul>
+            <li>15 scans a month</li>
+            <li>Typing receipts in by hand doesn't use a scan</li>
+            <li>Export, price history and spending stay free for everyone</li>
+          </ul>
+        </div>
+        <div class="plan premium">
+          <h3>Premium</h3>
+          <ul>
+            <li>Scan as many receipts as you like, up to 50 a day, for one person</li>
+            <li>More than one warranty (your first is free)</li>
+          </ul>
+        </div>
+      </div>
+      <p class="fine">Premium is not on sale yet. When it is, it will cost €39 a year or €4.99 a month, VAT included. Linezy is for personal and household use, not for business expense reporting.</p>
+    </div>
+  </section>
+
+  <section class="section" id="contact" aria-labelledby="contact-h">
+    <div class="wrap">
+      <h2 id="contact-h">Say hello</h2>
+      <p class="section-lead">Questions or ideas: <a href="mailto:support@linezy.app">support@linezy.app</a>. Anything about privacy: <a href="mailto:privacy@linezy.app">privacy@linezy.app</a>.</p>
+    </div>
+  </section>
 </main>
 
-<footer class="soon-footer">
+<footer class="site-footer">
   <div class="wrap">
-    <p>© 2026 Linezy Digital OÜ · Registry code 17640652</p>
-    <p>This site has no cookies, analytics or tracking. It's hosted on GitHub Pages, which sees visitors' IP addresses. Privacy questions: <a href="mailto:privacy@linezy.app">privacy@linezy.app</a></p>
+    <p>© 2026 Linezy Digital OÜ</p>
+    <nav aria-label="Footer">
+      <a href="privacy.html">Privacy policy</a>
+      <a href="terms.html">Terms of service</a>
+      <a href="privacy-et.html" hreflang="et" lang="et">Privaatsuspoliitika</a>
+      <a href="terms-et.html" hreflang="et" lang="et">Kasutustingimused</a>
+    </nav>
+    <p class="company">Linezy Digital OÜ · registry code 17640652 · VAT EE103051875 · Väike-Rae tee 11-5, Rae küla, Rae vald, 75310 Harju maakond, Estonia · <a href="mailto:support@linezy.app">support@linezy.app</a> · <a href="mailto:privacy@linezy.app">privacy@linezy.app</a></p>
   </div>
 </footer>
 </body>
