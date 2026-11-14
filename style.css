@@ -332,3 +332,25 @@ p { margin: 0; }
 .cat-bakery { --cat: var(--cat-bakery); --cat-text: var(--cat-bakery-text); }
 .cat-deposit { --cat: var(--cat-deposit); --cat-text: var(--cat-deposit-text); }
 .cat-meat { --cat: var(--cat-meat); --cat-text: var(--cat-meat-text); }
+
+/* Colour on the legal pages (app palette: Plum Jam) */
+.doc h1 { color: var(--primary); }
+.toc { background: var(--tertiary-container); color: var(--on-tertiary-container); }
+.toc a { color: var(--on-tertiary-container); }
+.doc h2:not(#toc-h) { padding-left: 14px; border-left: 6px solid var(--bar, var(--primary)); border-radius: 3px; }
+.doc h2:nth-of-type(6n+1) { --bar: var(--primary); }
+.doc h2:nth-of-type(6n+2) { --bar: var(--cat-produce); }
+.doc h2:nth-of-type(6n+3) { --bar: var(--cat-dairy); }
+.doc h2:nth-of-type(6n+4) { --bar: var(--cat-bakery); }
+.doc h2:nth-of-type(6n+5) { --bar: var(--cat-beverages); }
+.doc h2:nth-of-type(6n) { --bar: var(--cat-deposit); }
+.doc .rows > li { background: var(--surface-container); border-left: 5px solid var(--tertiary); }
+.doc .model-form { border-left: 0; border-radius: 14px; padding: 16px 20px; background: var(--warning-container); color: var(--on-warning-container); }
+.doc .model-form a { color: var(--on-warning-container); }
+
+/* Header tabs: pills instead of underlines */
+.site-nav { gap: 4px 6px; }
+.site-nav a { padding-inline: 14px; border-radius: 999px; text-decoration: none; font-weight: 700; transition: background-color .15s; }
+.site-nav a:hover { background: color-mix(in srgb, currentColor 16%, transparent); }
+.site-nav a[aria-current="page"] { background: var(--accent); color: var(--on-accent); }
+@media (max-width: 480px) { .site-nav { margin-left: -14px; } }
