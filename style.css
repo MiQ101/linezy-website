@@ -24,6 +24,17 @@
   --on-warning-container: #2a1a00;
   --price-up: #b0300f;
   --price-down: #00668b;
+  --surface-container: #fce6db;
+  --tertiary: #2f6578;
+  --card-raised: #fff7f2;
+  --tertiary-container: #c4eaf8;
+  --on-tertiary-container: #001f28;
+  --cat-produce: #0e9373; --cat-produce-text: #006b57;
+  --cat-dairy: #1e7bf0; --cat-dairy-text: #1d5ba8;
+  --cat-beverages: #e0368f; --cat-beverages-text: #9e296b;
+  --cat-bakery: #b86e00; --cat-bakery-text: #835000;
+  --cat-deposit: #5e5ce6; --cat-deposit-text: #4b48c9;
+  --cat-meat: #e5482a; --cat-meat-text: #ae3517;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -42,6 +53,17 @@
     --on-warning-container: #ffde9c;
     --price-up: #ffb49f;
     --price-down: #8ecfff;
+    --surface-container: #2d1f2f;
+    --tertiary: #a3d0e3;
+    --card-raised: #38293a;
+    --tertiary-container: #134d5f;
+    --on-tertiary-container: #c4eaf8;
+    --cat-produce: #2ed3a6; --cat-produce-text: #5fd6b5;
+    --cat-dairy: #5aa2ff; --cat-dairy-text: #8db9ff;
+    --cat-beverages: #ff6bb5; --cat-beverages-text: #f59bcb;
+    --cat-bakery: #ffc24a; --cat-bakery-text: #ffc24a;
+    --cat-deposit: #9c93ff; --cat-deposit-text: #bdb7ff;
+    --cat-meat: #ff7a55; --cat-meat-text: #ff9e7e;
   }
 }
 
@@ -282,3 +304,31 @@ p { margin: 0; }
 .model-form { margin: 1rem 0; padding: .75rem 1rem; border-left: 3px solid currentColor; }
 
 .site-footer p.company { flex-basis: 100%; display: block; min-height: 0; margin: 4px 0 8px; font-size: .875rem; line-height: 1.6; }
+
+/* Coloured bands (app palette: Plum Jam) */
+.band-warm { background: var(--surface-container); }
+.band-warm .card { background: var(--card-raised); }
+.band-teal { background: var(--tertiary-container); color: var(--on-tertiary-container); }
+.band-teal .card { background: var(--card-raised); color: var(--on-surface); }
+.band-teal .card h3 { color: var(--tertiary); }
+.band-lilac { background: var(--surface-low); }
+.band-lilac .plan { background: var(--card-raised); }
+.band-lilac .plan.premium { background: var(--hero); }
+.band-amber { background: var(--warning-container); color: var(--on-warning-container); }
+.band-amber .steps p { color: var(--on-warning-container); }
+.band-amber .steps li::before { background: var(--hero); color: var(--on-hero); }
+.band-yellow { background: var(--accent); color: var(--on-accent); }
+.band-yellow .section-lead, .band-yellow a { color: var(--on-accent); }
+.band-yellow :focus-visible { outline-color: var(--on-accent); }
+.plan.premium { background: var(--hero); color: var(--on-hero); }
+.plan.premium li::marker { color: var(--accent); }
+
+.card .tile { display: grid; place-items: center; width: 48px; height: 48px; margin-bottom: 12px; border-radius: 14px;
+  background: color-mix(in srgb, var(--cat) 18%, var(--card-raised)); color: var(--cat-text); }
+.card .tile .ic { margin: 0; color: inherit; }
+.cat-produce { --cat: var(--cat-produce); --cat-text: var(--cat-produce-text); }
+.cat-dairy { --cat: var(--cat-dairy); --cat-text: var(--cat-dairy-text); }
+.cat-beverages { --cat: var(--cat-beverages); --cat-text: var(--cat-beverages-text); }
+.cat-bakery { --cat: var(--cat-bakery); --cat-text: var(--cat-bakery-text); }
+.cat-deposit { --cat: var(--cat-deposit); --cat-text: var(--cat-deposit-text); }
+.cat-meat { --cat: var(--cat-meat); --cat-text: var(--cat-meat-text); }
