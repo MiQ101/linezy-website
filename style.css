@@ -231,7 +231,7 @@ p { margin: 0; }
 .card p { margin-top: 6px; color: var(--on-variant); font-size: 1rem; }
 
 .plans { margin-top: 32px; display: grid; gap: 16px; }
-@media (min-width: 720px) { .plans { grid-template-columns: repeat(2, 1fr); } }
+.plans { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
 .plan { padding: 24px; border-radius: 20px; background: var(--surface); }
 .plan.premium { background: var(--primary-container); color: var(--on-primary-container); }
 .plan h3 { font-size: 1.375rem; font-weight: 800; }
@@ -313,15 +313,19 @@ p { margin: 0; }
 .band-teal .card h3 { color: var(--tertiary); }
 .band-lilac { background: var(--surface-low); }
 .band-lilac .plan { background: var(--card-raised); }
-.band-lilac .plan.premium { background: var(--hero); }
+.band-lilac .plan.premium { background: var(--accent); }
+.band-lilac .plan.household { background: var(--hero); }
 .band-amber { background: var(--warning-container); color: var(--on-warning-container); }
 .band-amber .steps p { color: var(--on-warning-container); }
 .band-amber .steps li::before { background: var(--hero); color: var(--on-hero); }
 .band-yellow { background: var(--accent); color: var(--on-accent); }
 .band-yellow .section-lead, .band-yellow a { color: var(--on-accent); }
 .band-yellow :focus-visible { outline-color: var(--on-accent); }
-.plan.premium { background: var(--hero); color: var(--on-hero); }
-.plan.premium li::marker { color: var(--accent); }
+/* As in the app: Premium amber, the Household plan plum. */
+.plan.premium { background: var(--accent); color: var(--on-accent); }
+.plan.premium .badge { background: var(--on-accent); color: var(--accent); }
+.plan.household { background: var(--hero); color: var(--on-hero); }
+.plan.household li::marker { color: var(--accent); }
 
 .card .tile { display: grid; place-items: center; width: 48px; height: 48px; margin-bottom: 12px; border-radius: 14px;
   background: color-mix(in srgb, var(--cat) 18%, var(--card-raised)); color: var(--cat-text); }
