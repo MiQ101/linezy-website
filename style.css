@@ -396,5 +396,6 @@ p { margin: 0; }
   text-decoration: none;
   font-weight: 700;
 }
-.social a:hover { background: var(--on-accent); color: var(--accent); }
-.social .logo { width: 24px; height: 24px; flex: none; fill: currentColor; }
+/* The logos keep their own brand colours, so the hover only lightens the button. */
+.social a:hover { background: rgb(255 255 255 / .55); }
+.social .logo { width: 24px; height: 24px; flex: none; }
